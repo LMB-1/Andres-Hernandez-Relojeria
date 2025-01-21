@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés & Hernández Relojería</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('Pagina\ andres/logo Relojería Hernandez.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #000;
+        }
+
+        .main-clock {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .watches {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+            background-color: #d3d3d3;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .watch-item {
+            background-color: #d3d3d3;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            width: 180px;
+            height: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .watch-item img {
+            max-width: 100%;
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        .watch-item button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .watch-item button:hover {
+            background-color: #444;
+        }
+
+        .specs-panel {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #d3d3d3;
+            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            transition: right 0.3s ease;
+            padding: 20px;
+        }
+
+        .specs-panel h2 {
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+
+        .specs-panel p {
+            margin: 10px 0;
+        }
+
+        .specs-panel button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .specs-panel button:hover {
+            background-color: #444;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Andrés & Hernández Relojería</h1>
+    </header>
+
+    <section class="main-clock">
+        <img src="Oro y negro Reloj.jpg" alt="Reloj principal" width="300">
+    </section>
+
+    <section class="watches">
+        <div class="watch-item" onclick="showSpecs('Reloj Invicta', 'metálico en Dorado con bordes y pantalla negra con detalles dorados')">
+            <img src="Reloj invicta metálico en Dorado con bordes y pantalla negra con detalles dorados.jpg" alt="Reloj 1">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Invicta', 'Metálico con bordes y pantalla negra 🧔🏻')">
+            <img src="Reloj Invicta Metálico con bordes y pantalla negra 🧔🏻.jpg" alt="Reloj 2">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Invicta', 'en dorado con bordes en negro 🧔🏻‍♂')">
+            <img src="Reloj Invicta en dorado con bordes en negro 🧔🏻‍♂.jpg" alt="Reloj 3">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Invicta', 'en color metálico 🧔🏻‍♂')">
+            <img src="Reloj Invicta en color metálico 🧔🏻‍♂.jpg" alt="Reloj 4">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Guess', 'para ella 🌷')">
+            <img src="Reloj Guess para ella 🌷.jpg" alt="Reloj 5">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Invicta', 'en color dorado 🧔🏻‍♂')">
+            <img src="Reloj Invicta en color dorado 🧔🏻‍♂.jpg" alt="Reloj 6">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Guess', 'Para damas ❣')">
+            <img src="Reloj Guess para Dama ❣.jpg" alt="Reloj 7">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Guess', 'metálico con fondo elegante para ella 🤩')">
+            <img src="Reloj Guess metálico con fondo elegante para ella 🤩.jpg" alt="Reloj 8">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Guess', 'Fashion para una ocasión especial ❤')">
+            <img src="Reloj Guess Fashion para una ocasión especial ❤.jpg" alt="Reloj 9">
+            <button>Cotizar</button>
+        </div>
+        <div class="watch-item" onclick="showSpecs('Reloj Invicta', 'Dorado para resaltar de lujo 😉')">
+            <img src="Reloj dorado.jpg" alt="Reloj 10">
+            <button>Cotizar</button>
+        </div>
+    </section>
+
+    <div id="specs-panel" class="specs-panel">
+        <h2 id="specs-title">Especificaciones</h2>
+        <p id="specs-content">Selecciona un reloj para ver más detalles.</p>
+        <button onclick="hideSpecs()">Cerrar</button>
+    </div>
+
+    <footer>
+        <p>Andrés & Hernández Relojería</p>
+        <p>Página creada por LMB</p>
+    </footer>
+
+    <script>
+        function showSpecs(title, content) {
+            document.getElementById('specs-title').textContent = title;
+            document.getElementById('specs-content').textContent = content;
+            document.getElementById('specs-panel').style.right = '0';
+        }
+
+        function hideSpecs() {
+            document.getElementById('specs-panel').style.right = '-300px';
+        }
+    </script>
+</body>
+</html>
