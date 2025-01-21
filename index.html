@@ -8,29 +8,37 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('Pagina\ andres/logo Relojería Hernandez.jpg') no-repeat center center fixed;
+            background: url('fonde\ geometrico\ negro\ y\ dorado.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #333;
             text-align: center;
         }
 
         header {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgb(0, 0, 0);
             padding: 20px 0;
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #000;
+            color: #ffc600;
         }
 
         .main-clock {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
             margin: 20px auto;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgb(137, 137, 137, 0);
             border-radius: 10px;
-            display: inline-block;
+            max-width: 600px;
+        }
+
+        .main-clock img {
+            border-radius: 10px;
         }
 
         .watches {
@@ -39,18 +47,18 @@
             justify-content: center;
             gap: 20px;
             margin: 20px;
-            background-color: #d3d3d3;
+            background-color: rgba(0, 0, 0, 0);
             padding: 20px;
             border-radius: 10px;
         }
 
         .watch-item {
-            background-color: #d3d3d3;
+            background-color: #242424e3;
             border: 1px solid #ccc;
             border-radius: 10px;
             padding: 10px;
             width: 180px;
-            height: 300px;
+            height: 290px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: flex;
@@ -60,7 +68,7 @@
 
         .watch-item img {
             max-width: 100%;
-            height: 150px;
+            height: 160px;
             border-radius: 10px;
         }
 
@@ -68,10 +76,11 @@
             margin-top: 10px;
             padding: 10px;
             background-color: #000;
-            color: #fff;
+            color: #ffc600;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1em;
         }
 
         .watch-item button:hover {
@@ -84,7 +93,7 @@
             right: -300px;
             width: 300px;
             height: 100%;
-            background-color: #d3d3d3;
+            background-color: rgba(0, 0, 0, 0.68);
             box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
             overflow-y: auto;
             transition: right 0.3s ease;
@@ -92,31 +101,35 @@
         }
 
         .specs-panel h2 {
-            font-size: 1.5em;
+            font-size: 2.5em;
             margin-top: 0;
+            color: #ffc600;
         }
 
         .specs-panel p {
             margin: 10px 0;
+            font-size: 1.2em;
+            color: #ffd63f;
         }
 
         .specs-panel button {
             margin-top: 20px;
             padding: 10px;
             background-color: #000;
-            color: #fff;
+            color: #ffc600;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1.5em;
         }
 
         .specs-panel button:hover {
-            background-color: #444;
+            background-color: #3c3c3c;
         }
 
         footer {
             background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
+            color: #ffc800d4;
             padding: 10px;
             margin-top: 20px;
         }
@@ -128,11 +141,11 @@
 </head>
 <body>
     <header>
-        <h1>Andrés & Hernández Relojería</h1>
+        <h1>Hernández Relojería</h1>
     </header>
 
     <section class="main-clock">
-        <img src="Oro y negro Reloj.jpg" alt="Reloj principal" width="300">
+        <img src="Oro y negro Reloj.jpg" alt="Reloj principal" width="500">
     </section>
 
     <section class="watches">
